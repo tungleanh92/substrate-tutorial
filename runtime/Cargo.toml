@@ -28,6 +28,12 @@ features = ['derive']
 package = 'parity-scale-codec'
 version = '2.0.0'
 
+[dependencies.pallet-scheduler]
+default-features = false
+git = 'https://github.com/paritytech/substrate.git'
+tag = 'monthly-2021-12'
+version = '4.0.0-dev'
+
 [dependencies.frame-benchmarking]
 default-features = false
 git = 'https://github.com/paritytech/substrate.git'
@@ -211,6 +217,7 @@ std = [
     'frame-system/std',
     'pallet-aura/std',
     'pallet-balances/std',
+    'pallet-scheduler/std',
     'pallet-grandpa/std',
     'pallet-randomness-collective-flip/std',
     'pallet-sudo/std',
