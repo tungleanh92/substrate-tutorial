@@ -18,6 +18,12 @@ features = ['derive']
 package = 'parity-scale-codec'
 version = '2.0.0'
 
+[dependencies.sp-std]
+default-features = false
+git = 'https://github.com/paritytech/substrate.git'
+tag = 'monthly-2021-12'      # or another tag that is **uniform** for you project
+version = '4.0.0-dev' 
+
 [dependencies.frame-benchmarking]
 default-features = false
 git = 'https://github.com/paritytech/substrate.git'
@@ -66,6 +72,7 @@ runtime-benchmarks = ['frame-benchmarking']
 std = [
     'codec/std',
     'scale-info/std',
+    'sp-std/std',
     'frame-support/std',
     'frame-system/std',
     'frame-benchmarking/std',
